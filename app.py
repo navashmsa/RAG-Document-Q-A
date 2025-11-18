@@ -59,10 +59,10 @@ def create_vector_embedding():
 st.title("RAG Document Q&A")
 
 user_prompt=st.text_input("Enter your query from the reaserch paper")
-
-if st.button("Document Embedding"):
-    create_vector_embedding()
-    st.write("vector Database is ready")
+create_vector_embedding()
+# if st.button("Document Embedding"):
+#     create_vector_embedding()
+#     st.write("vector Database is ready")
 
 import time
 
@@ -82,6 +82,7 @@ if user_prompt:
         for i,doc in enumerate(response['context']):
             st.write(doc.page_content)
             st.write('---------------------------')
+
 
 
 
